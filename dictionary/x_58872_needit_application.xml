@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Application" max_length="40" name="x_58872_needit_application" sizeclass="5" type="collection">
+        <element label="Application" max_length="20" name="application" type="string"/>
+        <element label="Manager" max_length="32" name="manager" reference="sys_user" type="reference"/>
+        <element choice="3" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Type1" value="1"/>
+                <element inactive_on_update="false" label="Type2" value="2"/>
+                <element inactive_on_update="false" label="Type3" value="3"/>
+                <element inactive_on_update="false" label="type1" sequence="0" value="type1"/>
+                <element inactive_on_update="false" label="type2" sequence="0" value="type2"/>
+                <element inactive_on_update="false" label="type3" sequence="0" value="type3"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="manager"/>
+        </index>
+    </element>
+</database>
